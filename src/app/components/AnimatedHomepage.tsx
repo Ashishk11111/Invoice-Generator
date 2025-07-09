@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 
 'use client';
@@ -55,14 +56,6 @@ const AnimatedHomepage: React.FC<AnimatedHomepageProps> = ({
 }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const datekeys = ["date", "datePO", "DispatchedDate", "referenceDate"];
-  const MAX_ROWS = 13;
-
-  const totalRowsUsed = Object.values(descriptions).reduce(
-    (acc, val) => acc + val.details.length,
-    0
-  );
-
-
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
   };
