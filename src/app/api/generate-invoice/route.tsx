@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ToWords } from 'to-words';
 
 
@@ -260,7 +261,7 @@ export async function POST(req: Request) {
       .filter(([key, val]) => key.trim() !== "" && val.details.some(d => d.trim() !== ""));
 
     for (let descIndex = 0; descIndex < descriptionEntries.length; descIndex++) {
-      const [_,entry] = descriptionEntries[descIndex];
+      const [,entry] = descriptionEntries[descIndex];
       const { details, hsnCode, quantity, unit, rate, discount } = entry;
       
       // console.log(entry)
